@@ -34,5 +34,5 @@ find_coldest_weekend <- function(df){
   return(coldest)
 }
 
-df <- data.frame(read.table("RH_T.csv", header = TRUE, sep=","))  # reading data from input file
+df <- read.table("RH_T.csv", header = TRUE, sep=",")  # reading data from input file
 find_coldest_weekend(df)
