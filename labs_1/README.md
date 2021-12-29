@@ -21,3 +21,14 @@ get_id <- function(df){
 }
 
 ```
+
+Применение приведенной функции на реальных данных:
+
+```R
+
+library(plyr)
+load("data.RData")
+result <- get_id(data)
+print(result)
+
+```
