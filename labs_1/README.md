@@ -10,18 +10,10 @@
 * **id** - закодированное имя пациента
 * **temp** - значение температуры
 
-Задача решается при помощи следующей функции 
+Задача решается при помощи следующей функции **get_id**: 
 
-Ниже начинается многострочный блок кода
-
-    <!doctype html>
-    <html>
-        <head>
-            <!-- Заголовок документа -->
-        </head>
-        <body>
-            <!-- Тело документа -->
-        </body>
-    </html>
-
-Блок кода завершился
+get_id <- function(df){
+  temp_df <- join_all(data, by = 'id', type = 'inner')
+  means <- data.frame(id = temp_df[, 1], temperature = rowMeans(temp_df[, -1]))
+  return(means)
+}
